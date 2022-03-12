@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Global</title>
+    <title>JSDoc: Class: Token</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Global</h1>
+    <h1 class="page-title">Class: Token</h1>
 
     
 
@@ -28,7 +28,9 @@
 
 <header>
     
-        <h2></h2>
+        <h2><span class="attribs"><span class="type-signature"></span></span>Token<span class="signature">(token, expiration)</span><span class="type-signature"></span></h2>
+        
+            <div class="class-description">Class to handle the invalid tokens</div>
         
     
 </header>
@@ -38,86 +40,17 @@
     
         
 
-        
-
-
-<dl class="details">
-
+    
+    <h2>Constructor</h2>
     
 
     
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-        
-    
-    </div>
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    
-    <h4 class="name" id="isLoggedIn"><span class="type-signature"></span>isLoggedIn<span class="signature">(req, res, next)</span><span class="type-signature"></span></h4>
+    <h4 class="name" id="Token"><span class="type-signature"></span>new Token<span class="signature">(token, expiration)</span><span class="type-signature"></span></h4>
     
 
     
 
 
-
-<div class="description">
-    Check if the User is Logged in an save it to req.userData
-
-Redirect to the sign-in if the Token is invalid
-or if you call the sign-in or sign-up you get redirected
-to the /gaming
-</div>
 
 
 
@@ -152,13 +85,13 @@ to the /gaming
 
         <tr>
             
-                <td class="name"><code>req</code></td>
+                <td class="name"><code>token</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Request</span>
+<span class="param-type">string</span>
 
 
             
@@ -175,13 +108,13 @@ to the /gaming
 
         <tr>
             
-                <td class="name"><code>res</code></td>
+                <td class="name"><code>expiration</code></td>
             
 
             <td class="type">
             
                 
-<span class="param-type">Response</span>
+<span class="param-type">Date.time</span>
 
 
             
@@ -191,30 +124,7 @@ to the /gaming
 
             
 
-            <td class="description last"></td>
-        </tr>
-
-    
-
-        <tr>
-            
-                <td class="name"><code>next</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">callback</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"></td>
+            <td class="description last">unix timestamp</td>
         </tr>
 
     
@@ -255,7 +165,7 @@ to the /gaming
     
     <dt class="tag-source">Source:</dt>
     <dd class="tag-source"><ul class="dummy"><li>
-        <a href="handlers_middleware.js.html">handlers/middleware.js</a>, <a href="handlers_middleware.js.html#line44">line 44</a>
+        <a href="database_Models_JWT_Token.js.html">database/Models/JWT/Token.js</a>, <a href="database_Models_JWT_Token.js.html#line4">line 4</a>
     </li></ul></dd>
     
 
@@ -285,7 +195,23 @@ to the /gaming
 
 
 
-        
+    
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
     
 
     

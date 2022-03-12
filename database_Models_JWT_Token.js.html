@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: database/Models/Game/GameCreate.js</title>
+    <title>JSDoc: Source: database/Models/JWT/Token.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: database/Models/Game/GameCreate.js</h1>
+    <h1 class="page-title">Source: database/Models/JWT/Token.js</h1>
 
     
 
@@ -26,19 +26,22 @@
     
     <section>
         <article>
-            <pre class="prettyprint source linenums"><code>class GameCreate {
+            <pre class="prettyprint source linenums"><code>/**
+ * Class to handle the invalid tokens
+ */
+class Token {
     /**
-     * 
-     * @param {String} name 
-     * @param {String} coverImage Path of the filesystem
+     * @constructor
+     * @param {string} token 
+     * @param {Date.time} expiration unix timestamp
      */
-    constructor(name, coverImage) {
-        this.name = name;
-        this.coverImage = coverImage;
+    constructor(token, expiration) {
+        this.token = token;
+        this.expiration = expiration;
     }
 }
 
-module.exports = GameCreate;</code></pre>
+module.exports = Token;</code></pre>
         </article>
     </section>
 
