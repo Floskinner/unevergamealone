@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: database/Models/User/User.js</title>
+    <title>JSDoc: Source: public/javascripts/sidenav.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: database/Models/User/User.js</h1>
+    <h1 class="page-title">Source: public/javascripts/sidenav.js</h1>
 
     
 
@@ -27,26 +27,35 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Class representing a user
+ * @module Client_SideNav
  */
-class User {
-    /**
-     * @constructor
-     * @param {string} username name of the user
-     * @param {string} password password of the user hashed
-     * @param {string} email mail of the user
-     * @param {string} os operating system of the user
-     */
-    constructor(username, password, email, os) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.os = os;
-        this.registered = Date.now();
+
+window.onload = (event) => { document.getElementById("sidenav").style.width = "0px"; };
+
+/**
+ * Open the sidenavigation and change the icon of the button
+ */
+function openSidenav() {
+    var sidenav = document.getElementById("sidenav");
+    if (sidenav.style.width == "0px") {
+        sidenav.style.width = "250px";
+        btn = document.getElementById("btn-sidenav");
+        btn.innerHTML = "✖";
+        btn.style.border = "1px solid #F7F3F6";
+    } else {
+        closeSidenav();
     }
 }
 
-module.exports = User;</code></pre>
+/**
+ * Close the sidenavigation and change the icon of the button
+ */
+function closeSidenav() {
+    document.getElementById("sidenav").style.width = "0px";
+    btn = document.getElementById("btn-sidenav");
+    btn.innerHTML = "☰";
+    btn.style.border = "1px solid #273d40";
+}</code></pre>
         </article>
     </section>
 

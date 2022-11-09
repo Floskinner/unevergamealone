@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Source: database/Models/User/User.js</title>
+    <title>JSDoc: Source: public/javascripts/back-to-top-button.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,7 +17,7 @@
 
 <div id="main">
 
-    <h1 class="page-title">Source: database/Models/User/User.js</h1>
+    <h1 class="page-title">Source: public/javascripts/back-to-top-button.js</h1>
 
     
 
@@ -27,26 +27,29 @@
     <section>
         <article>
             <pre class="prettyprint source linenums"><code>/**
- * Class representing a user
+ * @module Client_Index
  */
-class User {
-    /**
-     * @constructor
-     * @param {string} username name of the user
-     * @param {string} password password of the user hashed
-     * @param {string} email mail of the user
-     * @param {string} os operating system of the user
-     */
-    constructor(username, password, email, os) {
-        this.username = username;
-        this.password = password;
-        this.email = email;
-        this.os = os;
-        this.registered = Date.now();
+var btn = document.getElementById("btt-btn");
+window.onscroll = function() { detectScroll() };
+
+/**
+ * Detect scrolling to make back-to-top button visible
+ */
+function detectScroll() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        btn.style.display = "block";
+    } else {
+        btn.style.display = "none";
     }
 }
 
-module.exports = User;</code></pre>
+/**
+ * Scroll to the top of the site
+ */
+function backToTop() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}</code></pre>
         </article>
     </section>
 
